@@ -1,5 +1,6 @@
 module.exports = {
   title: '落羽',
+  base: '/blog/',
   themeConfig: {
     nav: [
       { text: '前端学习', link: '/front-end/' },
