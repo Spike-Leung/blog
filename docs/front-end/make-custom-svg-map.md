@@ -1,3 +1,7 @@
+---
+tag: [svg, js]
+---
+
 # 制作 svg 地图轮廓
 
 ## 前言
@@ -23,7 +27,7 @@ amMap 的文档提供了一些工具，不过安装有些麻烦，以前尝试�
 - 打开 console，通过命令获得需要的轮廓
   - 过滤得到淄博的轮廓 `filter 'NAME_1 == "Shandong" && NAME_2 == "Zibo" && NAME_3 != "Gaoqing" || NAME_3 == "Zouping"'`
   - 清除淄博以外的区域 `mapshaper -clean`
-  - 由于不需要轮廓里面的线，只需要最外面那层轮廓，将里面的线移除 `mapshaper -dissolve`, `mapshaper -clean`
+¯  - 由于不需要轮廓里面的线，只需要最外面那层轮廓，将里面的线移除 `mapshaper -dissolve`, `mapshaper -clean`
 - 导出成 svg 数据，到此已经得到一个淄博地图轮廓的 svg 了
 - 由于要在 ammap 里用，使用 ammap 提供的[工具](http://extra.amcharts.com/mapparser3/)，获取 json 数据，这里获取的 json 数据就能用于 mamap 了
   - 打开导出的 svg 文件，复制里面`<g>`标签的全部内容

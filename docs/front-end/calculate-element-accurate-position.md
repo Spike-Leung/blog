@@ -1,3 +1,7 @@
+---
+tag: js
+---
+
 ### 计算元素位置
 
 - [Getting the Mouse Click Position](https://www.kirupa.com/html5/getting_mouse_click_position.htm)
