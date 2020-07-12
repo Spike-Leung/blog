@@ -13,10 +13,13 @@ module.exports = {
         '',
         'calculate-element-accurate-position',
         'make-custom-svg-map',
+        'svg-basic',
+        'how-to-show-country-flag'
       ],
       '/journey/': [
         '',
         'blog-start',
+        'getting-things-done'
       ],
     },
     searchPlaceholder: '搜索标题',
