@@ -12,13 +12,4 @@ module.exports = {
     },
     lastUpdated: true,
   },
-  bundlerConfig: {
-    viteOptions: {
-      resolve: {
-        alias: {
-          img: "../../images",
-        },
-      },
-    },
-  },
 };

@@ -30,7 +30,7 @@ tag: vuepress
 需要注意的是，`.travis.yml`中有一个`github_token`的配置，这个配置需要到github生成一个token，然后在travis上配置到博客的环境变量中。
 ### 使用plugin-blog实现标签分类
 安装插件，按照教程设置配置后，发现没有出现标签分类的页面。
-![image](~img/plugin-blog-frontmatter-classifier.png)
+![image](./plugin-blog-frontmatter-classifier.png)
 
 文档中说，会使用`Tags`布局作为tag列表的布局，`Tag`布局作为具体tag的内容展示布局。
 
