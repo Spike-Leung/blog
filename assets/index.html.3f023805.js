@@ -1,1 +1,0 @@
-import{o as a,c as r,F as e,a as n,b as s}from"./app.8406dcbb.js";const d={},t=n("h1",{id:"介绍",tabindex:"-1"},[n("a",{class:"header-anchor",href:"#介绍","aria-hidden":"true"},"#"),s(" 介绍")],-1),o=n("p",null,"这里用来记录前端学习的一些心得",-1);d.render=function(n,s){return a(),r(e,null,[t,o],64)};export default d;
