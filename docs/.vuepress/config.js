@@ -12,4 +12,13 @@ module.exports = {
     },
     lastUpdated: true,
   },
+  plugins: [
+    [
+      "@vuepress/docsearch",
+      {
+        apiKey: "e181b068b0389b48c9e6c973c17ec438",
+        indexName: "spike-leung",
+      },
+    ],
+  ],
 };
