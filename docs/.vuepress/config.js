@@ -18,6 +18,14 @@ module.exports = {
       {
         apiKey: "e181b068b0389b48c9e6c973c17ec438",
         indexName: "spike-leung",
+        locales: {
+          "/": {
+            placeholder: "Search Documentation",
+          },
+          "/zh/": {
+            placeholder: "搜索文档",
+          },
+        },
       },
     ],
   ],
