@@ -1,6 +1,9 @@
+const { path } = require("@vuepress/utils");
+
 module.exports = {
   title: "落羽",
   base: "/blog/",
+  theme: path.resolve(__dirname, 'theme'),
   themeConfig: {
     navbar: [
       { text: "前端学习", link: "/front-end/" },
