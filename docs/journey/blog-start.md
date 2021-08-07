@@ -45,3 +45,5 @@ tag: vuepress
 官网提供了[主题继承](https://vuepress.vuejs.org/theme/inheritance.html)的方法。
 
 最后，继承默认主题，然后编写Tags和Tag布局即可。
+
+### 使用github action更新github page
