@@ -1,12 +1,24 @@
-name: learn-github-action
+# Optional - The name of the workflow as it will appear in the Actions tab of the GitHub repository.
+name: deploy-to-github-page
+# Specify the event that automatically triggers the workflow file.
 on: [push]
+# Groups together all the jobs that run in the workflow file
 jobs:
+  # define job name
   check-bats-version:
+    # Configures the job to run on an Ubuntu Linux runner
     runs-on: ubuntu-latest
+    # Groups together all the steps that run in the job
+    # Each item nested under this section is a separate action or shell command.
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2 # actions The uses keyword tells the job to retrieve v2 of the community action named actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - run: npm install -g bats
-      - run: bats -v
+      - run: yarn install # shell command, The run keyword tells the job to execute a command on the runner.
+      - run: yarn build
+      - name: Deploy
+        use: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secret.GITHUB_TOKEN }}
+          publish_dir: docs/.vuepress/dist
