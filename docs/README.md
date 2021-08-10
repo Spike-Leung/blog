@@ -10,3 +10,4 @@ footer: MIT Licensed | Copyright © 2021-present Spike Leung
 
 ## 杂
 - [SVN cheatsheet](/blog/others/svn-cheatsheet.html)
+- [部署前端静态文件的简单步骤](/blog/others/simple-deploy-static-file.html)

@@ -12,7 +12,7 @@ module.exports = {
     ],
     sidebar: {
       "/front-end/": ["make-custom-svg-map.md", "how-to-show-country-flag.md"],
-      "/others/": ["svn-cheatsheet.md"],
+      "/others/": ["svn-cheatsheet.md", "simple-deploy-static-file.md"],
     },
     lastUpdated: true,
   },
