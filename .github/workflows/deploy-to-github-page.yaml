@@ -5,7 +5,7 @@ on: [push]
 # Groups together all the jobs that run in the workflow file
 jobs:
   # define job name
-  check-bats-version:
+  deploy:
     # Configures the job to run on an Ubuntu Linux runner
     runs-on: ubuntu-latest
     # Groups together all the steps that run in the job
