@@ -1,0 +1,1 @@
+import{o as a,c as r,F as e,a as n,b as s}from"./app.0b99b5f9.js";const t={},d=n("h1",{id:"介绍",tabindex:"-1"},[n("a",{class:"header-anchor",href:"#介绍","aria-hidden":"true"},"#"),s(" 介绍")],-1),o=n("p",null,"这里用来记录前端学习的一些心得",-1);t.render=function(n,s){return a(),r(e,null,[d,o],64)};export default t;
