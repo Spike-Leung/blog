@@ -11,3 +11,4 @@ footer: MIT Licensed | Copyright © 2021-present Spike Leung
 ## 杂
 - [SVN cheatsheet](/blog/others/svn-cheatsheet.html)
 - [部署前端静态文件的简单步骤](/blog/others/simple-deploy-static-file.html)
+- [使用 GitHub Actions 部署博客到GitHub Pages](/blog/others/deploy-blog-with-github-actions.html)

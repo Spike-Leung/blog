@@ -210,9 +210,12 @@ ssh root@1.1.1.1 "tar -C /home/hello-world -xz -f-" < build.tar.gz
 ## 进一步节省操作
 尽管写了bash脚本，简单的执行一下就能完成部署了，但每次还要手动执行一下。
 
-能不能每次提交时执行呢？使用一些CI工具就可以实现了，例如[GitHub Actions](https://docs.github.com/en/actions)， [Travis CI](https://www.travis-ci.com/)等
+能不能每次提交时执行呢？使用一些CI工具就可以实现了，例如[GitHub Actions](https://docs.github.com/en/actions)， [Travis CI](https://www.travis-ci.com/)等。
 
-在此就不做展开了，读者可自行探索。
+笔者使用`GitHub Actions`实现了博客的自动部署，也许可以给你一些[参考](https://spike-leung.github.io/blog/others/deploy-blog-with-github-actions.html)。
+
+此处不做展开，读者可自行探索 :)
+
 
 ## 参考链接
 
