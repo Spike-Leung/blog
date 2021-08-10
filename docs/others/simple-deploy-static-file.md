@@ -15,9 +15,9 @@
 - ...
 
 ## 2. tar打包
-当执行完构建后, 在某个目录下，会生成若干的静态文件，把静态文件上传到服务器上对应的目录，即可以通过服务器访问构建好的静态文件了。
+当执行完构建后， 在某个目录下，会生成若干的静态文件，把静态文件上传到服务器上对应的目录，即可以通过服务器访问构建好的静态文件了。
 
-在上传时，如果一个一个文件上传，会有些麻烦, 我们可以先将这些静态文件打包成一个 tar 包再一次性上传。
+在上传时，如果一个一个文件上传，会有些麻烦， 我们可以先将这些静态文件打包成一个 tar 包再一次性上传。
 
 ### 压缩
 进入到静态文件所在的目录
@@ -27,7 +27,7 @@ cd path/to/dist
 
 将静态文件压缩为一个 tar 包
 ```shell
-tar -zxvf build_1.0.tar.gz *
+tar -zcvf build_1.0.tar.gz *
 ```
 
 参数解释：
@@ -35,10 +35,11 @@ tar -zxvf build_1.0.tar.gz *
 - `-v` 显示打包时的详细输出
 - `-z` 使用Gzip对打包文件进行压缩
 - `-f` 指定打包后的文件名
+- `*` 表示打包当前目录下的所有文件，你也可以指定一个一个的文件进行打包
 
 
 ## 3. scp 上传 tar 包
-打包完之后，需要把 tar 包上传到服务器，可以使用 `scp` 命令, 假设要上传到 `1.1.1.1` 上的 `/home` 目录, 使用 `1.1.1.1` 的 `root`用户。
+打包完之后，需要把 tar 包上传到服务器，可以使用 `scp` 命令， 假设要上传到 `1.1.1.1` 上的 `/home` 目录, 使用 `1.1.1.1` 的 `root`用户。
 
 ```
 scp path/to/tar root@1.1.1.1:/home 
@@ -66,7 +67,7 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 
 - 使用`root`用户通过`ssh`连接`1.1.1.1`的机器
 - 这里需要确认服务器的指纹，输入`yes`就好了 (不过出于安全考虑，你也可以验证一下这个指纹对不对，确定是你要连接的目标机器)
-  - 这里是因为机器之前没连接过，要把目标机器的公钥存储到下来, 用来下次识别目标机器
+  - 这里是因为机器之前没连接过，要把目标机器的公钥存储到下来， 用来下次识别目标机器
 
 ### 避免重复输入密码
 每次使用 `ssh` 命令，都要重新输入一次密码，着实麻烦，通过把 `ssh` 密钥存到服务器上，可以避免每次连接时输入密码。
@@ -100,13 +101,13 @@ ssh-copy-id -i path/to/.ssh/id_rsa.pub root@1.1.1.1
 
 有时，目标机器可能重装了，或者目标机器的公钥发生了变化，存储在 `~/.ssh/known_host` 的目标机器的公钥就失效了。
 
-解决办法就是打开`~/.ssh/known_host`, 删除掉对应机器的公钥，重新用`ssh`连接机器，存储一个新的公钥就好了。
+解决办法就是打开`~/.ssh/known_host`， 删除掉对应机器的公钥，重新用`ssh`连接机器，存储一个新的公钥就好了。
 
 
 ## 5. 解压 tar 包
-当上传到服务器上后，需要把静态文件从 tar 包中解压出来, 你需要把文件解压到服务器指定的目录下，具体要看你服务器如何配置的。
+当上传到服务器上后，需要把静态文件从 tar 包中解压出来， 你需要把文件解压到服务器指定的目录下，具体要看你服务器如何配置的。
 
-假设你使用的是 Nginx, 查看 Nginx 配置, 可以知道要把 tar 包解压到什么目录。
+假设你使用的是 Nginx， 查看 Nginx 配置， 可以知道要把 tar 包解压到什么目录。
 
 ```shell
     ...
@@ -159,7 +160,7 @@ tar -xvf build.1.0.tar.gz
 
 结合 bash 脚本，把上面的命令组合一下，就可以实现了。
 
-如将一下脚本保存为`tar.sh`, 只要执行`./tar.sh`即可完成打包部署的步骤。
+如将以下脚本保存为`tar.sh`, 只要执行`./tar.sh`即可完成打包部署的步骤。
 
 ```bash
 #!/usr/bin/env sh
@@ -178,7 +179,7 @@ echo "Build finish!"
 # navigate into the build output directory
 cd dist/
 
-echo "start finish"
+    echo "tar start"
 
 # 打包压缩构建后的静态文件
 tar zcvf build.tar.gz *
@@ -194,7 +195,7 @@ echo 'upload & untar done'
 
 cd -
 ```
-关于 Bash 脚本怎么写，可以看看[Bash 脚本教程](https://wangdoc.com/bash/), 这里解释一下
+关于 Bash 脚本怎么写，可以看看[Bash 脚本教程](https://wangdoc.com/bash/)， 这里解释一下其中的某行脚本：
 ```bash
 ssh root@1.1.1.1 "tar -C /home/hello-world -xz -f-" < build.tar.gz
 ```
@@ -209,7 +210,7 @@ ssh root@1.1.1.1 "tar -C /home/hello-world -xz -f-" < build.tar.gz
 ## 进一步节省操作
 尽管写了bash脚本，简单的执行一下就能完成部署了，但每次还要手动执行一下。
 
-能不能每次提交时执行呢？使用一些CI工具就可以实现了，例如[GitHub Actions](https://docs.github.com/en/actions), [Travis CI](https://www.travis-ci.com/)等
+能不能每次提交时执行呢？使用一些CI工具就可以实现了，例如[GitHub Actions](https://docs.github.com/en/actions)， [Travis CI](https://www.travis-ci.com/)等
 
 在此就不做展开了，读者可自行探索。
 
