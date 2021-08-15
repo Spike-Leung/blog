@@ -1,0 +1,1 @@
+import{o as a,c as e,F as r,a as n,b as d}from"./app.d4f32ead.js";const s={},t=n("h1",{id:"介绍",tabindex:"-1"},[n("a",{class:"header-anchor",href:"#介绍","aria-hidden":"true"},"#"),d(" 介绍")],-1),o=n("p",null,"这里用来记录前端学习的一些心得",-1);s.render=function(n,d){return a(),e(r,null,[t,o],64)};export default s;
