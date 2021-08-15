@@ -1,1 +1,0 @@
-const e={key:"v-d04b9b30",path:"/journey/",title:"journey",lang:"en-US",frontmatter:{},excerpt:"",headers:[],filePathRelative:"journey/README.md",git:{updatedTime:1629016188e3,contributors:[]}};export{e as data};
