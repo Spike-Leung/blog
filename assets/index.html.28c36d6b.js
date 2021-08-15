@@ -1,1 +1,0 @@
-import{o as a,c as r,F as e,a as n,b as o}from"./app.0c5c70fc.js";const s={},u=n("h1",{id:"journey",tabindex:"-1"},[n("a",{class:"header-anchor",href:"#journey","aria-hidden":"true"},"#"),o(" journey")],-1),c=n("p",null,"此分类用于记录一些随想",-1);s.render=function(n,o){return a(),r(e,null,[u,c],64)};export default s;
