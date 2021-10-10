@@ -8,7 +8,7 @@ footer: MIT Licensed | Copyright © 2021-present Spike Leung
 
 Hi， 由于 [hugo](https://gohugo.io/) 支持以 `org` 文件写博客，笔者也很喜欢 emacs 的 `org-mode`, 
 
-故将博客迁移到 hugo 搭建的 [博客](https://spike-leung.github.io/taxodium/)，往后都将在新博客进行更新 :)
+故将博客迁移到 hugo 搭建的 [博客](https://taxodium.vercel.app/)，往后都将在新博客进行更新 :)
 
 :::
 
